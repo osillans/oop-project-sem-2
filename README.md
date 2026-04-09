@@ -6,10 +6,10 @@
 
 Частина - Технологія
 
-Backend - Python, FastAPI, SQLAlchemy, SQLite
-Frontend - React, TypeScript, Vite, Tailwind CSS
-Авторизація - JWT (python-jose), bcrypt (passlib)
-Стан - Zustand
+Backend - Python, FastAPI, SQLAlchemy, SQLite;
+Frontend - React, TypeScript, Vite, Tailwind CSS;
+Авторизація - JWT (python-jose), bcrypt (passlib);
+Стан - Zustand;
 HTTP - Axios
 
 ## Базова структура
@@ -69,10 +69,10 @@ supersportyk/
 Множники активності:
 Рівень - Множник
 
-Сидячий - 1.2
-Легка активність - 1.375
-Помірна - 1.55
-Активний - 1.725
+Сидячий - 1.2;
+Легка активність - 1.375;
+Помірна - 1.55;
+Активний - 1.725;
 Дуже активний - 1.9
 
 Коригування за ціллю: −500 ккал (схуднення) / +300 ккал (набір) / без змін (підтримка)
