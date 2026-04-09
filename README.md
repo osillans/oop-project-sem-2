@@ -99,8 +99,8 @@ npm install
 npm run dev
 ```
 
-- Інтерфейс: http://localhost:5173
-- API документація: http://localhost:8001/docs
+Інтерфейс: http://localhost:5173
+API документація: http://localhost:8001/docs
 
 ## API ендпоінти (базові)
 
