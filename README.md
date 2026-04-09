@@ -15,37 +15,39 @@ HTTP - Axios
 ## Базова структура
 
 ```
-supersportyk/
-├── backend/
-│   ├── main.py               # Ініціалізація FastAPI, CORS, роутери
-│   ├── database.py           # Підключення до SQLite, сесія SQLAlchemy
-│   ├── models/
-│   │   ├── __init__.py       # Імпорт моделей та зв'язків
-│   │   ├── user.py           # Модель користувача
-│   │   ├── product.py        # Модель продукту
-│   │   └── menu.py           # Моделі меню та позицій
-│   ├── schemas/
-│   │   └── user.py           # Pydantic схеми користувача
-│   ├── routers/
-│   │   ├── auth.py           # Реєстрація та вхід
-│   │   └── users.py          # Профіль користувача
-│   ├── services/
-│   │   └── auth_service.py   # JWT, bcrypt, розрахунок КБЖВ
-│   └── requirements.txt
-└── frontend/
-    ├── index.html
-    ├── package.json
-    ├── vite.config.ts
-    └── src/
-        ├── main.tsx
-        ├── App.tsx
-        ├── api/
-        │   └── client.ts     # Axios з токеном
-        ├── store/
-        │   └── authStore.ts  # Zustand сховище
-        └── pages/
-            ├── LoginPage.tsx
-            └── RegisterPage.tsx
+
+   backend/
+   ├── main.py               # Ініціалізація FastAPI, CORS, роутери
+   ├── database.py           # Підключення до SQLite, сесія SQLAlchemy
+   ├── models/
+   │   ├── __init__.py       # Імпорт моделей та зв'язків
+   │   ├── user.py           # Модель користувача
+   │   ├── product.py        # Модель продукту
+   │   └── menu.py           # Моделі меню та позицій
+   ├── schemas/
+   │   └── user.py           # Pydantic схеми користувача
+   ├── routers/
+   │   ├── auth.py           # Реєстрація та вхід
+   │   └── users.py          # Профіль користувача
+   ├── services/
+   │   └── auth_service.py   # JWT, bcrypt, розрахунок КБЖВ
+   └── requirements.txt
+   frontend/
+   │├── index.html
+   │├── package.json
+   │├── vite.config.ts
+   │└── src/
+   │     ├── main.tsx
+   │     ├── App.tsx
+   │     ├── api/
+   │     │   └── client.ts     # Axios з токеном
+   │     ├── store/
+   │     │   └── authStore.ts  # Zustand сховище
+   │     └── pages/
+   │         ├── LoginPage.tsx
+   │         └── RegisterPage.tsx
+   ├── .gitignore
+   └── README.md
 ```
 ## Реалізований функціонал
 
