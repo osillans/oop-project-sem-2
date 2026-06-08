@@ -68,7 +68,7 @@ export default function RegisterPage() {
             <input {...register("password")} type="password" className="input w-full" />
             {errors.password && <p className="err">{errors.password.message}</p>}
           </div>
-          <p className="text-xs text-gray-400">Необов'язкові дані для розрахунку КБЖВ:</p>
+          <p className="text-xs text-gray-400">Дані для розрахунку КБЖВ:</p>
           <div className="grid grid-cols-3 gap-3">
             <div>
               <label className="block text-sm font-medium mb-1">Вік</label>
@@ -123,3 +123,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+
