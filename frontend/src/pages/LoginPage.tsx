@@ -23,11 +23,9 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
     try {
-      const form = new URLSearchParams();
-      form.append("username", data.username);
-      form.append("password", data.password);
-      const res = await client.post("/auth/login", form, {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      const res = await client.post("/auth/login", {
+        username: data.username,
+        password: data.password,
       });
       setAuth(res.data.access_token, res.data.user);
       navigate("/menu");
@@ -67,4 +65,3 @@ export default function LoginPage() {
     </div>
   );
 }
-
