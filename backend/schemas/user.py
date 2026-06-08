@@ -2,7 +2,7 @@ from pydantic import BaseModel, EmailStr
 from typing import Optional
 
 
-class UserRegister(BaseModel):
+class UserCreate(BaseModel):
     username: str
     email: EmailStr
     password: str
@@ -10,8 +10,8 @@ class UserRegister(BaseModel):
     weight: Optional[float] = None
     height: Optional[float] = None
     sex: Optional[str] = None
-    goal: Optional[str] = "maintain"
-    activity_level: Optional[str] = "moderate"
+    goal: Optional[str] = None
+    activity_level: Optional[str] = None
 
 
 class UserUpdate(BaseModel):
@@ -23,7 +23,7 @@ class UserUpdate(BaseModel):
     activity_level: Optional[str] = None
 
 
-class UserResponse(BaseModel):
+class UserOut(BaseModel):
     id: int
     username: str
     email: str
@@ -42,7 +42,12 @@ class UserResponse(BaseModel):
         from_attributes = True
 
 
-class TokenResponse(BaseModel):
+class Token(BaseModel):
     access_token: str
-    token_type: str = "bearer"
-    user: UserResponse
+    token_type: str
+    user: UserOut
+
+
+class LoginData(BaseModel):
+    username: str
+    password: str
