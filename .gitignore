@@ -4,3 +4,8 @@ backend/*.db
 frontend/node_modules/
 frontend/dist/
 .env
+
+.vs/
+__pycache__/
+backend/**/__pycache__/
+frontend/package-lock.json
