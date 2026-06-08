@@ -9,3 +9,7 @@ frontend/dist/
 __pycache__/
 backend/**/__pycache__/
 frontend/package-lock.json
+
+node_modules/
+package-lock.json
+frontend/src/src/
