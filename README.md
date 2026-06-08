@@ -12,43 +12,50 @@ Frontend - React, TypeScript, Vite, Tailwind CSS;
 Стан - Zustand;
 HTTP - Axios
 
-## Базова структура
+## Структура проєкту
 
 ```
-
-   backend/
-   ├── main.py               # Ініціалізація FastAPI, CORS, роутери
-   ├── database.py           # Підключення до SQLite, сесія SQLAlchemy
-   ├── models/
-   │   ├── __init__.py       # Імпорт моделей та зв'язків
-   │   ├── user.py           # Модель користувача
-   │   ├── product.py        # Модель продукту
-   │   └── menu.py           # Моделі меню та позицій
-   ├── schemas/
-   │   └── user.py           # Pydantic схеми користувача
-   ├── routers/
-   │   ├── auth.py           # Реєстрація та вхід
-   │   └── users.py          # Профіль користувача
-   ├── services/
-   │   └── auth_service.py   # JWT, bcrypt, розрахунок КБЖВ
-   └── requirements.txt
-   frontend/
-   │├── index.html
-   │├── package.json
-   │├── vite.config.ts
-   │└── src/
-   │     ├── main.tsx
-   │     ├── App.tsx
-   │     ├── api/
-   │     │   └── client.ts     # Axios з токеном
-   │     ├── store/
-   │     │   └── authStore.ts  # Zustand сховище
-   │     └── pages/
-   │         ├── LoginPage.tsx
-   │         └── RegisterPage.tsx
-   ├── .gitignore
-   └── README.md
+backend/
+├── main.py                  # Ініціалізація FastAPI, CORS, роутери
+├── database.py              # Підключення до SQLite, сесія SQLAlchemy
+├── models/
+│   ├── __init__.py          # Імпорт моделей та зв'язків
+│   ├── user.py              # Модель користувача
+│   ├── product.py           # Модель продукту
+│   └── menu.py              # Моделі меню та позицій
+├── schemas/
+│   └── user.py              # Pydantic схеми користувача
+├── routers/
+│   ├── auth.py              # Реєстрація та вхід
+│   └── users.py             # Профіль користувача
+├── services/
+│   └── auth_service.py      # JWT, bcrypt, розрахунок КБЖВ
+├── test_app.py              # Юніт-тести (pytest)
+└── requirements.txt
+frontend/
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+└── src/
+    ├── main.tsx
+    ├── App.tsx              # Маршрутизація, захищені роути
+    ├── index.css            # Tailwind стилі
+    ├── api/
+    │   └── client.ts        # Axios з токеном
+    ├── store/
+    │   └── authStore.ts     # Zustand сховище
+    ├── components/
+    │   ├── Navbar.tsx        # Навігаційна панель
+    │   └── NutritionBar.tsx  # Прогрес-бар КБЖВ
+    └── pages/
+        ├── LoginPage.tsx
+        ├── RegisterPage.tsx
+        └── ProfilePage.tsx
 ```
+
 ## Реалізований функціонал
 
 - Реєстрація користувача з параметрами тіла (вік, вага, зріст, стать)
@@ -58,6 +65,7 @@ HTTP - Axios
 - Авторизація через JWT токен
 - Захищені роути для авторизованих користувачів
 - Збереження сесії у localStorage
+- Відображення профілю з цільовими показниками КБЖВ
 
 ## Розрахунок КБЖВ
 
@@ -104,7 +112,14 @@ npm run dev
 Інтерфейс: http://localhost:5173
 API документація: http://localhost:8001/docs
 
-## API ендпоінти (базові)
+### Тести
+```bash
+cd backend
+.\venv\Scripts\Activate.ps1
+pytest test_app.py -v
+```
+
+## API ендпоінти
 
 | Метод | URL | Опис |
 |---|---|---|
